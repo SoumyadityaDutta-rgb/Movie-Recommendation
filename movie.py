@@ -8,7 +8,7 @@ import time
 # Fetch poster function (robust)
 # -----------------------------
 def fetch_poster(movie_id):
-    API_KEY = "5bf9f3c8d175c56ea7f27c8be6edc6ee"
+    API_KEY = ""
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US"
     try:
         response = requests.get(url, timeout=10)
@@ -74,3 +74,4 @@ if st.button("Recommend"):
         with col:
             st.text(recommended_movie_names[idx])
             st.image(recommended_movie_posters[idx])
+
